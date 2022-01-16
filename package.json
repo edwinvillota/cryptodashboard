@@ -7,7 +7,12 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "sh ./scripts/start.sh"
+    "start": "sh ./scripts/start.sh",
+    "prepare": "husky install",
+    "pre-commit-lint": "yarn lint-staged"
+  },
+  "lint-staged": {
+    "**/*.ts": "tsc-files --noEmit"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -32,6 +37,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

@@ -1,0 +1,23 @@
+@use '../palette/palette' as Palette;
+@use '../sizes/sizes' as Sizes;
+
+:root {
+  --theme-palette-primary: #{Palette.$palette-primary};
+  --theme-palette-secondary: #{Palette.$palette-secondary};
+  --theme-palette-light: #{Palette.$palette-light};
+  --theme-palette-lighter: #{Palette.$palette-lighter};
+  --theme-palette-dark: #{Palette.$palette-dark};
+  --theme-palette-darker: #{Palette.$palette-darker};
+  --theme-palette-error: #{Palette.$palette-error};
+  --theme-palette-success: #{Palette.$palette-success};
+  --theme-palette-disabled: #{Palette.$palette-disabled};
+  --theme-size-xxxs: #{Sizes.$size-xxxs};
+  --theme-size-xxs: #{Sizes.$size-xxs};
+  --theme-size-xs: #{Sizes.$size-xs};
+  --theme-size-s: #{Sizes.$size-s};
+  --theme-size-m: #{Sizes.$size-m};
+  --theme-size-lg: #{Sizes.$size-lg};
+  --theme-size-xlg: #{Sizes.$size-xlg};
+  --theme-size-xxlg: #{Sizes.$size-xxlg};
+  --theme-size-xxxlg: #{Sizes.$size-xxxlg};
+}

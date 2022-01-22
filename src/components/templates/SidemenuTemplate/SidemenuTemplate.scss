@@ -1,0 +1,22 @@
+.SidemenuTemplate {
+  &--main {
+    display: flex;
+    height: 100vh;
+    background-color: var(--theme-palette-secondary);
+  }
+
+  &--sidemenuWrapper {
+    display: flex;
+    min-width: 300px;
+    padding-top: calc(var(--theme-size-xxlg) * 2);
+  }
+
+  &--contentWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--theme-palette-light);
+    padding: calc(var(--theme-size-xlg) * 2);
+    border-radius: calc(var(--theme-size-xxlg) * 2) 0 0 calc(var(--theme-size-xxlg) * 2);
+  }
+}

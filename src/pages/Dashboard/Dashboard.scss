@@ -1,0 +1,14 @@
+.Dashboard {
+  &--container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--theme-size-m);
+  }
+
+  &--title {
+    font-size: var(--theme-size-xlg);
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+  }
+}

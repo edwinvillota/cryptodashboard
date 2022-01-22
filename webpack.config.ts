@@ -48,6 +48,8 @@ const config = (): Configuration => {
       compress: true,
       port: 3000,
       open: true,
+      historyApiFallback: true,
+      hot: true,
     },
     resolve: {
       modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -55,6 +57,9 @@ const config = (): Configuration => {
       alias: {
         '@theme': path.resolve(__dirname, 'src/theme'),
         '@components': path.resolve(__dirname, 'src/components'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@models': path.resolve(__dirname, 'src/models'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
         '@public': path.resolve(__dirname, 'public'),
       },

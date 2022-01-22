@@ -1,5 +1,6 @@
 @use '../palette/palette' as Palette;
 @use '../sizes/sizes' as Sizes;
+@use '../fonts/fonts' as Fonts;
 
 :root {
   --theme-palette-primary: #{Palette.$palette-primary};
@@ -20,4 +21,11 @@
   --theme-size-xlg: #{Sizes.$size-xlg};
   --theme-size-xxlg: #{Sizes.$size-xxlg};
   --theme-size-xxxlg: #{Sizes.$size-xxxlg};
+  --theme-font-primary: #{Fonts.$font-primary};
+  --theme-font-secondary: #{Fonts.$font-secondary};
+}
+
+body,
+#root {
+  min-height: 100vh;
 }

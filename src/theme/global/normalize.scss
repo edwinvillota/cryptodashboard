@@ -8,7 +8,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -26,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /**

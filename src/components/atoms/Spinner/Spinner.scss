@@ -1,0 +1,38 @@
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.Spinner {
+  &--container {
+    position: relative;
+    width: var(--component-spinner-size);
+    height: var(--component-spinner-size);
+    border-radius: 100%;
+    border: solid var(--component-spinner-border-width) var(--theme-palette-disabled);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(var(--component-spinner-border-width) * -1);
+      left: calc(var(--component-spinner-border-width) * -1);
+      width: var(--component-spinner-size);
+      height: var(--component-spinner-size);
+      border-radius: 100%;
+      border: solid var(--component-spinner-border-width) var(--theme-palette-secondary);
+      clip-path: polygon(0 0, 50% 50%, 0 100%);
+      animation-name: rotate;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-play-state: var(--component-spinner-state);
+    }
+  }
+}

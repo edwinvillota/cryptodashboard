@@ -1,0 +1,26 @@
+.Input {
+  &--wrapper {
+    display: flex;
+    background-color: var(--theme-palette-lighter);
+    border-radius: var(--theme-size-lg);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--theme-size-m);
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--input {
+    border: none;
+    background-color: transparent;
+
+    &:active,
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

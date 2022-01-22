@@ -1,0 +1,12 @@
+.Button {
+  &--button {
+    display: flex;
+    padding: var(--theme-size-m);
+    border: none;
+    background-color: var(--theme-palette-lighter);
+    border-radius: var(--theme-size-lg);
+    font-size: var(--theme-size-m);
+    gap: var(--theme-size-xs);
+    cursor: pointer;
+  }
+}

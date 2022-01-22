@@ -1,0 +1,38 @@
+.SideMenu {
+  &--nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    flex: 1;
+    padding-left: var(--theme-size-lg);
+  }
+
+  &--item {
+    display: flex;
+    width: 100%;
+    gap: var(--theme-size-lg);
+    padding: var(--theme-size-s) var(--theme-size-lg);
+    border-radius: calc(var(--theme-size-lg) * 2) 0 0 calc(var(--theme-size-lg) * 2);
+    text-decoration: none;
+    align-items: center;
+
+    &:visited,
+    &:active {
+      color: var(--theme-palette-darker);
+    }
+
+    &-icon {
+      width: var(--theme-size-xxlg);
+      height: var(--theme-size-xxlg);
+      color: var(--theme-palette-primary);
+    }
+
+    &-text {
+      font-weight: 500;
+    }
+
+    &-active {
+      background-color: var(--theme-palette-light);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.Dashboard--header {
+  display: flex;
+}
+
+.Dashboard--welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    font-size: var(--theme-size-lg);
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &-caption {
+    text-align: left;
+    font-size: var(--theme-size-s);
+    color: var(--theme-palette-primary);
+  }
+}
+
+.Dashboard--search {
+  display: flex;
+  margin-left: auto;
+}

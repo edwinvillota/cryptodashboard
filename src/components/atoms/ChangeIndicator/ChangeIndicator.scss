@@ -1,0 +1,38 @@
+.ChangeIndicator {
+  &--container {
+    display: flex;
+    justify-content: flex-end;
+    font-family: var(--theme-font-secondary);
+  }
+
+  &--icon {
+    width: var(--theme-size-m);
+    height: var(--theme-size-m);
+
+    &-down {
+      color: var(--theme-palette-error);
+    }
+
+    &-up {
+      color: var(--theme-palette-success);
+    }
+  }
+
+  &--value {
+    font-size: var(--theme-size-m);
+
+    &-down {
+      color: var(--theme-palette-error);
+    }
+
+    &-up {
+      color: var(--theme-palette-success);
+    }
+  }
+
+  &--frequency {
+    align-self: center;
+    font-size: var(--theme-size-s);
+    color: var(--theme-palette-disabled);
+  }
+}

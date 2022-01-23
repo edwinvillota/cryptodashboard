@@ -18,5 +18,7 @@
     background-color: var(--theme-palette-light);
     padding: calc(var(--theme-size-xlg) * 2);
     border-radius: calc(var(--theme-size-xxlg) * 2) 0 0 calc(var(--theme-size-xxlg) * 2);
+    max-height: 100vh;
+    overflow: auto;
   }
 }

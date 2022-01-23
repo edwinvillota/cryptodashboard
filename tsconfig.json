@@ -17,11 +17,14 @@
     "paths": {
       "@theme/*": ["theme/*"],
       "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
+      "@pages": ["pages"],
       "@models": ["models"],
-      "@utils/*": ["utils/*"],
-      "@hooks/*": ["hooks/*"],
-      "@public/*": ["./public/*"]
+      "@utils": ["utils"],
+      "@hooks": ["hooks"],
+      "@public/*": ["./public/*"],
+      "@sagas": ["sagas"],
+      "@services": ["services"],
+      "@app/*": ["app/*"]
     }
   },
   "include": ["src"],

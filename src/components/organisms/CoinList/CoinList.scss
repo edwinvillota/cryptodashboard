@@ -1,0 +1,16 @@
+.CoinList {
+  &--container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    margin: calc(var(--theme-size-m) * -1);
+    padding: var(--theme-size-m);
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--theme-size-xlg);
+  }
+}

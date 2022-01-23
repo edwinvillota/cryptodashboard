@@ -1,0 +1,51 @@
+.CoinCard {
+  &--container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--theme-size-s);
+    padding: var(--theme-size-xlg);
+    border-radius: var(--theme-size-xlg);
+    background-color: var(--theme-palette-lighter);
+    box-shadow: 0 4px 12px rgba($color: black, $alpha: 0.25);
+    overflow: hidden;
+  }
+
+  &--row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--symbol {
+    font-size: var(--theme-size-lg);
+    font-weight: bold;
+    color: var(--theme-palette-darker);
+    margin: 0;
+  }
+
+  &--name {
+    display: flex;
+    font-size: var(--theme-size-lg);
+    font-weight: 400;
+  }
+
+  &--rank {
+    font-size: var(--theme-size-s);
+    color: var(--theme-palette-primary);
+    align-self: baseline;
+
+    &::before {
+      content: '#';
+    }
+  }
+
+  &--usd {
+    font-family: var(--theme-font-secondary);
+    font-size: var(--theme-size-xxlg);
+  }
+}

@@ -9,8 +9,8 @@ export type Coin = {
   percent_change_1h: string;
   percent_change_7d: string;
   market_cap_usd: string;
-  volume24: string;
-  volume24_native: string;
+  volume24: number;
+  volume24a: number;
   csupply: string;
   price_btc: string;
   tsupply: string;

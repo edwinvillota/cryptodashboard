@@ -8,7 +8,7 @@ const SideMenu: FC = () => {
   return (
     <nav className="SideMenu--nav">
       <NavLink
-        to="/dashboard"
+        to="/"
         className={(navData) => (navData.isActive ? clx('SideMenu--item', 'SideMenu--item-active') : 'SideMenu--item')}
       >
         <MdOutlineGridView className="SideMenu--item-icon" /> <span className="SideMenu--item-text">Dashboard</span>

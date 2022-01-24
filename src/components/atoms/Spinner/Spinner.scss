@@ -12,6 +12,7 @@
 
 .Spinner {
   &--container {
+    display: flex;
     position: relative;
     width: var(--component-spinner-size);
     height: var(--component-spinner-size);

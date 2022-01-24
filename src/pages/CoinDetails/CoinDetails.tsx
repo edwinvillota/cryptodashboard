@@ -24,7 +24,9 @@ const CoinDetails: FC = () => {
       <SidemenuTemplate.Content fullPage>
         <main className="CoinDetails--container">
           <Header coinName={coin?.name} symbol={coin?.symbol} />
-          <section className="CoinDetails--wrapper">{coin ? <Details coin={coin} /> : <Spinner />}</section>
+          <section className="CoinDetails--wrapper">
+            {coin ? <Details coin={coin} /> : <Spinner className="CoinDetails--loading" />}
+          </section>
         </main>
       </SidemenuTemplate.Content>
     </SidemenuTemplate>

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { CoinCardProps } from './Coincard.props';
 import { ChangeIndicator } from '@components/atoms';
 import { formatUSD } from '@utils';
@@ -6,7 +7,7 @@ import './CoinCard.scss';
 
 const CoinCard: FC<CoinCardProps> = ({ coin }) => {
   return (
-    <div className="CoinCard--container">
+    <Link className="CoinCard--container" to={`/coin/${coin.id}`}>
       <div className="CoinCard--row">
         <h1 className="CoinCard--symbol">{coin.symbol}</h1>
         <span className="CoinCard--name">
@@ -20,7 +21,7 @@ const CoinCard: FC<CoinCardProps> = ({ coin }) => {
           <ChangeIndicator value={coin.percent_change_7d} frequency="7d" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

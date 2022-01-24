@@ -8,6 +8,8 @@
     background-color: var(--theme-palette-lighter);
     box-shadow: 0 4px 12px rgba($color: black, $alpha: 0.25);
     overflow: hidden;
+    text-decoration: none;
+    color: var(--theme-palette-darker);
   }
 
   &--row {

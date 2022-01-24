@@ -1,7 +1,8 @@
-import React, { FC, useEffect } from 'react';
-import { SidemenuTemplateComposition } from './SidemenuTemplate.props';
+import React, { FC } from 'react';
+import clx from 'classnames';
+import { SidemenuTemplateComposition, ContentProps } from './SidemenuTemplate.props';
 import { SideMenu } from '@components/organisms';
-import { useActions, useAppSelector } from '@hooks';
+import { useAppSelector } from '@hooks';
 import { selectCoinsState } from '@app/features/coins';
 import { SplashScreen } from '@pages';
 import './SidemenuTemplate.scss';
@@ -10,15 +11,16 @@ const Aside: FC = ({ children = <SideMenu /> }) => (
   <aside className="SidemenuTemplate--sidemenuWrapper">{children}</aside>
 );
 
-const Content: FC = ({ children }) => <section className="SidemenuTemplate--contentWrapper">{children}</section>;
+const Content: FC<ContentProps> = ({ children, fullPage }) => (
+  <section
+    className={clx('SidemenuTemplate--contentWrapper', { 'SidemenuTemplate--contentWrapper-fullPage': fullPage })}
+  >
+    {children}
+  </section>
+);
 
 const SidemenuTemplate: FC & SidemenuTemplateComposition = ({ children }) => {
-  const actions = useActions();
   const coinsState = useAppSelector(selectCoinsState);
-
-  useEffect(() => {
-    actions.coinsRequest();
-  }, []);
 
   if (coinsState.isLoading) return <SplashScreen />;
 

@@ -20,5 +20,9 @@
     border-radius: calc(var(--theme-size-xxlg) * 2) 0 0 calc(var(--theme-size-xxlg) * 2);
     max-height: 100vh;
     overflow: auto;
+
+    &-fullPage {
+      border-radius: 0;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SidemenuTemplate } from '@components/templates';
 import { CoinList } from '@components/organisms';
-import { Header, Filters } from './components';
+import { Header } from './components';
 import './Dashboard.scss';
 
 const Dashboard: FC = () => {
@@ -12,7 +12,6 @@ const Dashboard: FC = () => {
         <main className="Dashboard--container">
           <Header />
           <h1 className="Dashboard--title">Coins</h1>
-          <Filters />
           <CoinList />
         </main>
       </SidemenuTemplate.Content>

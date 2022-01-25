@@ -5,7 +5,7 @@ import './Input.scss';
 
 const Input: FC<InputProps> = ({ className, icon, ...props }) => {
   return (
-    <div className={clx('Input--wrapper', className)}>
+    <div aria-label="input-wrapper" className={clx('Input--wrapper', className)}>
       <input {...props} className="Input--input" />
       {icon}
     </div>

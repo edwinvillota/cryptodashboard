@@ -4,6 +4,9 @@ import type { Coin } from '@models';
 
 interface CoinsState {
   data: Coin[];
+  searchKey?: string;
+  searchProps: Array<keyof Coin>;
+  filteredData: Coin[];
   detail?: Coin;
   isLoading: boolean;
   isError?: boolean;
@@ -12,6 +15,8 @@ interface CoinsState {
 
 const initialState: CoinsState = {
   data: [],
+  searchProps: ['name', 'symbol'],
+  filteredData: [],
   isLoading: true,
 };
 
@@ -49,11 +54,31 @@ export const coinsSlice = createSlice({
       state.error = action.payload;
       state.detail = undefined;
     },
+    setCoinsSearchKey: (state, action: PayloadAction<string>) => {
+      state.searchKey = action.payload;
+
+      const regExp = new RegExp(`(${action.payload})`, 'gmi');
+
+      state.filteredData = state.data.filter((coin) => {
+        for (let prop of state.searchProps) {
+          if (regExp.test(`${coin[prop]}`)) {
+            return coin;
+          }
+        }
+      });
+    },
   },
 });
 
-export const { coinsRequest, coinsSucceed, coinsFailed, coinDetailRequest, coinDetailSucceed, coinDetailFailed } =
-  coinsSlice.actions;
+export const {
+  coinsRequest,
+  coinsSucceed,
+  coinsFailed,
+  coinDetailRequest,
+  coinDetailSucceed,
+  coinDetailFailed,
+  setCoinsSearchKey,
+} = coinsSlice.actions;
 
 export const selectCoinsState = (state: RootState) => state.coins;
 

@@ -6,11 +6,12 @@ import './CoinList.scss';
 
 const CoinList: FC = () => {
   const coinsState = useAppSelector(selectCoinsState);
+  const data = !!coinsState.searchKey ? coinsState.filteredData : coinsState.data;
 
   return (
     <main className="CoinList--container">
       <section className="CoinList--grid">
-        {coinsState.data.map((coin) => (
+        {data.map((coin) => (
           <CoinCard coin={coin} />
         ))}
       </section>

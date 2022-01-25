@@ -65,6 +65,7 @@ const config = (): Configuration => {
         '@sagas': path.resolve(__dirname, 'src/sagas'),
         '@services': path.resolve(__dirname, 'src/services'),
         '@public': path.resolve(__dirname, 'public'),
+        '@tests': path.resolve(__dirname, 'utils/test-utils'),
       },
     },
     devtool: 'inline-source-map',

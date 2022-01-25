@@ -24,7 +24,8 @@
       "@public/*": ["./public/*"],
       "@sagas": ["sagas"],
       "@services": ["services"],
-      "@app/*": ["app/*"]
+      "@app/*": ["app/*"],
+      "@tests": ["utils/test-utils"]
     }
   },
   "include": ["src"],
